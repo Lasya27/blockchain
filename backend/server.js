@@ -17,9 +17,9 @@ app.post("/upload", upload.single("file"), (req, res) => {
 
 /* ================== DATABASE ================== */
 
-mongoose.connect("mongodb://127.0.0.1:27017/blockchainDB")
-.then(() => console.log("MongoDB Connected"))
-.catch(() => console.log("DB Error"));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected ✅"))
+  .catch(err => console.log("Mongo Error ❌", err));
 
 /* ================== MODEL ================== */
 
