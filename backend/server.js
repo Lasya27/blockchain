@@ -1,10 +1,18 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 const { ethers } = require("ethers");
 const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
+const db = require("./db");
+
+db.run(`
+  CREATE TABLE IF NOT EXISTS certificates (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    course TEXT
+  )
+`);
 
 
 
@@ -15,11 +23,9 @@ app.post("/upload", upload.single("file"), (req, res) => {
   res.send("File uploaded");
 });
 
-/* ================== DATABASE ================== */
 
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB Connected ✅"))
-  .catch(err => console.log("Mongo Error ❌", err));
+
+
 
 /* ================== MODEL ================== */
 
@@ -178,6 +184,10 @@ app.get("/users", async (req, res) => {
   res.json(users);
 });
 
+
+app.get("/", (req, res) => {
+  res.send("Backend Running with SQLite 🚀");
+});
 
 
 /* ================== START SERVER ================== */
