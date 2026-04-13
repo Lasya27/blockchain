@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  color: white;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd369;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.hero p {
+  opacity: 0.8;
+}
+
+/* Glass Card */
+.card {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 380px;
+  margin: 40px auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  text-align: center;
+  color: white;
+}
+
+.card {
+  max-width: 400px;
+  margin: auto;
+}
+
+video {
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 2px solid white;
+}
+
+input[type="file"] {
+  margin: 10px 0;
+}
+
+/* Inputs */
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.07);
+}
+
+/* Certificate */
+.certificate {
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.certificate h2 {
+  color: #333;
+}
+
+.certificate {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 20px;
+  text-align: center;
+  border: 3px solid #4CAF50;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
